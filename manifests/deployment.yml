@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: sanjavapub 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sanjavapub 
+    spec:
+      containers:
+        - name: sanjavapub 
+          image: sanimages.azurecr.io/sanjavapub
+          ports:
+          - containerPort: 8080
